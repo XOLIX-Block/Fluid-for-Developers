@@ -90,6 +90,17 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - 🕸️ [P2P Mesh & Consensus Architecture](./docs/infrastructure/02-p2p-mesh-and-consensus.md) — AegisMesh P2P gossip, handshake signatures, peer scoring, sybil defense, and fake node prevention.
 - ⚡ [Running a Full RPC Node](./docs/infrastructure/03-full-node-and-rpc.md) — Non-validating archival and JSON-RPC node setup with Nginx reverse proxy.
 
+### 10. EVM Developer Tooling
+- ☕ [Hardhat Integration Guide](./docs/tools/01-hardhat-setup.md) — Configuring `hardhat.config.ts` for Chain ID 44990/44991, deploy scripts, and Etherscan plugin.
+- 🔨 [Foundry / Forge Integration Guide](./docs/tools/02-foundry-setup.md) — `foundry.toml`, `forge create`, `cast` commands, and deployment scripts.
+- 🌐 [Remix IDE Integration Guide](./docs/tools/03-remix-ide.md) — Developing and deploying contracts via Injected Provider in your browser.
+
+### 11. Production Integration Guides
+- 📜 [Smart Contract Verification Guide](./docs/guides/01-contract-verification.md) — Verifying Solidity and FluidScript contracts on XolixScan Explorer.
+- 🔮 [Oracles & Price Feeds Guide](./docs/guides/02-oracles-and-price-feeds.md) — Consuming real-time decentralized price feeds and staleness protection.
+- 📊 [Event Indexing & Log Filtering Guide](./docs/guides/03-event-indexing-and-logs.md) — `eth_getLogs`, WebSocket event streaming, and building dApp indexers.
+- 🌉 [Cross-Chain Interoperability & XCAP Protocol](./docs/guides/04-cross-chain-and-bridges.md) — Native cryptographic light-client verification (QLCV) and cross-chain transfers.
+
 ---
 
 ## 💻 Code Example: Writing a Fluid Token in 30 Seconds
