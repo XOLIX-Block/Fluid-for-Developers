@@ -85,6 +85,11 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - 📡 [JSON-RPC Reference](./docs/api/rpc-reference.md) — Full list of standard and native (`xol_*`) methods.
 - 🚰 [Testnet Faucet Guide](./docs/api/faucet-guide.md) — Obtaining free `tXOL` for sandbox development.
 
+### 9. Infrastructure & Node Operations
+- 🛡️ [Validator Node Setup & Staking Guide](./docs/infrastructure/01-validator-node-setup.md) — Hardware specs, sovereign key generation, on-chain stake registration, and protocol auto-activation.
+- 🕸️ [P2P Mesh & Consensus Architecture](./docs/infrastructure/02-p2p-mesh-and-consensus.md) — AegisMesh P2P gossip, handshake signatures, peer scoring, sybil defense, and fake node prevention.
+- ⚡ [Running a Full RPC Node](./docs/infrastructure/03-full-node-and-rpc.md) — Non-validating archival and JSON-RPC node setup with Nginx reverse proxy.
+
 ---
 
 ## 💻 Code Example: Writing a Fluid Token in 30 Seconds
