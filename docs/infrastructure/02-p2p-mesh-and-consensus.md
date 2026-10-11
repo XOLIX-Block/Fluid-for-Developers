@@ -35,7 +35,7 @@ The XOLIX FLUID networking layer implements a high-throughput, low-latency authe
 1. **Bootnode Discovery**: When a node launches, it contacts the hardcoded trusted bootnodes (`seed1.xolix.io`, `seed2.xolix.io`, etc.).
 2. **Cryptographic Handshake**: Nodes exchange a secure `HANDSHAKE` payload containing:
    - Protocol version (e.g. `1.1.0`)
-   - Network / Chain ID (`1024` for Mainnet)
+   - Network / Chain ID (`44990` for Mainnet, `44991` for Testnet)
    - Genesis Block Hash (`0x...`)
    - Node Peer ID and public key signature
 3. **Peer Exchange (PEX)**: After a successful handshake, nodes exchange lists of known active peers (`PEER_EXCHANGE` messages), allowing the network to form a dense, decentralized mesh without relying on bootnodes once connected.

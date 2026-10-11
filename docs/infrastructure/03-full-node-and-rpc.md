@@ -105,7 +105,7 @@ curl -X POST http://127.0.0.1:8545 \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}'
 
-# Expected response: {"jsonrpc":"2.0","id":1,"result":"0x400"} (Chain ID 1024)
+# Expected response: {"jsonrpc":"2.0","id":1,"result":"0xafbe"} (Mainnet 44990, or "0xafbf" for Testnet 44991)
 ```
 
 ```bash
