@@ -53,12 +53,15 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - 📜 [Smart Contract Interactions](./docs/sdk/04-contract-interaction.md) — Zero-gas view calls (`read`) and state writes (`write`).
 - 🏭 [ContractFactory Deployment](./docs/sdk/05-contract-deployment.md) — Programmatic deployment and bytecode execution.
 - 🔍 [Preflight Simulation Engine](./docs/sdk/06-preflight-and-simulation.md) — Pre-broadcast risk scoring and XCU estimation.
+- 📱 [Mobile & Multi-Language Client SDKs](./docs/sdk/07-mobile-and-multi-language.md) — iOS (Swift), Android (Kotlin), React Native, Python (web3.py), and Go (ethclient).
 
 ### 4. DApp & Wallet Integrations
 - 🦊 [Browser Wallet Integration](./docs/dapps/01-wallet-integration.md) — EIP-1193, MetaMask, Xolix Wallet, and network switching.
 - ⚛️ [React, Wagmi v2 & Viem](./docs/dapps/02-react-and-wagmi.md) — React hooks, custom chain definitions, and UI components.
 - 🛠️ [Ethers.js (v5/v6) & Web3.js](./docs/dapps/03-ethers-and-web3.md) — Node.js backends and legacy integration guides.
 - 📊 [Transaction Lifecycle & Receipts](./docs/dapps/04-transaction-lifecycle.md) — Mempool states, event subscriptions, and VM error codes.
+- 👆 [Biometric Passkeys & WebAuthn](./docs/dapps/05-passkeys-and-webauthn.md) — Seedless FaceID/TouchID onboarding and gas sponsorship via QSC-4900.
+- 💼 [Custom Sovereign Wallet Engineering](./docs/dapps/06-custom-wallet-engineering.md) — BIP-39 mnemonic derivation, dual Bech32m/EVM addressing, and XRAS transaction signing.
 
 ### 5. Token & Contract Standards
 - 🪙 [QSC-20 Fungible Token Standard](./docs/standards/QSC20-fungible-tokens.md) — The standard currency token specification (`QSC20.fls`).
@@ -66,6 +69,7 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - ⚖️ [QSC-352 Compliance / RWA Standard](./docs/standards/QSC352-compliance-tokens.md) — Regulated assets with on-chain KYC verification (`QSC352.fls`).
 - 🏛️ [QSC-4900 Multisig Vault Standard](./docs/standards/QSC4900-multisig-vaults.md) — $M$-of-$N$ threshold governance vault (`QSC4900.fls`).
 - 🔒 [Liquidity Pools & Liquidity Locking Guide](./docs/standards/liquidity-locking-guide.md) — How AMM pools work, LP token generation, and on-chain liquidity locking.
+- 🔮 [EVM Native Precompiles Reference Table](./docs/standards/05-evm-native-precompiles.md) — 10 native precompiled contracts (0x01 to 0x0a) for PoDI verification, cross-standard bridging, and simulation.
 
 ### 6. End-to-End Tutorials
 - 🛠️ [Tutorial 1: Toolchain & CLI Setup](./docs/tutorials/01-environment-and-cli.md) — Installing `@xolix/fluid-cli` and configuring IDEs.
@@ -79,6 +83,7 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - ✅ [25-Point Security Audit Checklist](./docs/security/audit-checklist.md) — Mandatory verification before mainnet launch.
 - ⚠️ [Common Pitfalls & Mitigations](./docs/security/common-pitfalls.md) — Reentrancy, overflows, flash-loan vulnerabilities, and MEV.
 - 🔍 [BIP-350 Address Validation](./docs/security/address-validation.md) — Checksum verification and format translation.
+- 🛡️ [Protocol Security Innovations & Protections](./docs/security/04-protocol-security-innovations.md) — In-depth breakdown of XIF (Intent Firewall), XVCB (Velocity Breaker), R-FLD (Flash-Loan Deflector), and XRAS (Replay Shield).
 
 ### 8. Public Explorer & Node APIs
 - 🔎 [XolixScan REST API Guide](./docs/api/explorer-api.md) — Blocks, transactions, account history, and contract verification.
