@@ -2,6 +2,12 @@
 
 This guide describes how cross-chain asset transfers and arbitrary message passing work on **XOLIX FLUID** using the **XCAP (Cross-Chain Asset Protocol)** and the **Questdrium Light-Client Verifier (QLCV)**.
 
+> [!IMPORTANT]
+> **Implementation Status & Roadmap Notice**:
+> - **Protocol Library Status**: The cryptographic light-client verification schema (`QuestdriumLightClientVerifier` / `QLCV` in `interoperability/lightClientVerifier.ts`) and EVM precompile definitions are implemented in the protocol core.
+> - **Bridge Network Status**: Automated off-chain cross-chain relayer daemons between Ethereum Mainnet and XOLIX are scheduled under **Phase 4 of the Ecosystem Roadmap**.
+> - **Explorer Testnet Bridge**: The `/bridge` interface on XolixScan currently routes transactions to the designated prototype router (`0xBRIDGE000000000000000000000000000000000001`) for testnet verification and dApp UI integration testing. Developers must NOT attempt to send live mainnet Ethereum or Bitcoin funds to testnet bridge routers.
+
 ---
 
 ## 1. Overview of XCAP Architecture

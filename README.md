@@ -105,6 +105,8 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - 🔮 [Oracles & Price Feeds Guide](./docs/guides/02-oracles-and-price-feeds.md) — Consuming real-time decentralized price feeds and staleness protection.
 - 📊 [Event Indexing & Log Filtering Guide](./docs/guides/03-event-indexing-and-logs.md) — `eth_getLogs`, WebSocket event streaming, and building dApp indexers.
 - 🌉 [Cross-Chain Interoperability & XCAP Protocol](./docs/guides/04-cross-chain-and-bridges.md) — Native cryptographic light-client verification (QLCV) and cross-chain transfers.
+- 🚀 [Token Launch & Liquidity Checklist](./docs/guides/05-token-launch-checklist.md) — End-to-end launch guide, DEX pool setup, LP locking, and safety checks.
+- 🏛️ [DAO Governance & Proposal Workflow](./docs/guides/06-dao-governance-workflow.md) — GXO voting tokens, proposal submission, timelocks, and treasury execution.
 
 ---
 
