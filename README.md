@@ -89,6 +89,7 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - 🔎 [XolixScan REST API Guide](./docs/api/explorer-api.md) — Blocks, transactions, account history, and contract verification.
 - 📡 [JSON-RPC Reference](./docs/api/rpc-reference.md) — Full list of standard and native (`xol_*`) methods.
 - 🚰 [Testnet Faucet Guide](./docs/api/faucet-guide.md) — Obtaining free `tXOL` for sandbox development.
+- 🛑 [RPC & VM Error Codes Reference](./docs/api/error-codes.md) — Standard JSON-RPC error codes, EVM execution reverts, and XHREC error translations.
 
 ### 9. Infrastructure & Node Operations
 - 🛡️ [Validator Node Setup & Staking Guide](./docs/infrastructure/01-validator-node-setup.md) — Hardware specs, sovereign key generation, on-chain stake registration, and protocol auto-activation.
@@ -99,6 +100,8 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - ☕ [Hardhat Integration Guide](./docs/tools/01-hardhat-setup.md) — Configuring `hardhat.config.ts` for Chain ID 44990/44991, deploy scripts, and Etherscan plugin.
 - 🔨 [Foundry / Forge Integration Guide](./docs/tools/02-foundry-setup.md) — `foundry.toml`, `forge create`, `cast` commands, and deployment scripts.
 - 🌐 [Remix IDE Integration Guide](./docs/tools/03-remix-ide.md) — Developing and deploying contracts via Injected Provider in your browser.
+- 🐳 [Running a Local Development Node](./docs/tools/04-local-node-and-docker.md) — Instant local sandbox mining via Docker Compose or Node.js CLI.
+- 🧪 [Smart Contract Testing & Fuzzing Guide](./docs/tools/05-testing-and-fuzzing.md) — Automated unit testing with Hardhat (Chai) and invariant fuzzing with Foundry.
 
 ### 11. Production Integration Guides
 - 📜 [Smart Contract Verification Guide](./docs/guides/01-contract-verification.md) — Verifying Solidity and FluidScript contracts on XolixScan Explorer.
