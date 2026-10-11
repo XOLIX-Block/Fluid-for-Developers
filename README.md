@@ -164,11 +164,14 @@ Fluid-for-Developers/
 │   ├── getting-started/    # Architecture, quickstarts, network details
 │   ├── fluidscript/        # Language specification & syntax
 │   ├── sdk/                # Official TypeScript SDK reference
-│   ├── dapps/              # Wallet and frontend integration guides
-│   ├── standards/          # QSC-20, QSC-721, QSC-352, QSC-4900
+│   ├── dapps/              # Wallet, WebAuthn passkeys, custom wallets
+│   ├── standards/          # QSC-20, QSC-721, QSC-352, QSC-4900, Precompiles
 │   ├── tutorials/          # Step-by-step guides from zero to production
-│   ├── security/           # 25-point audit checklist & address validation
-│   └── api/                # XolixScan REST API & JSON-RPC reference
+│   ├── security/           # 25-point audit checklist, innovations (XIF/XVCB)
+│   ├── api/                # XolixScan REST API, JSON-RPC & error codes
+│   ├── infrastructure/     # Validator node setup, AegisMesh P2P, RPC nodes
+│   ├── tools/              # Hardhat, Foundry, Remix, local Docker node, testing
+│   └── guides/             # Verification, oracles, logs, XCAP, token launch, DAO
 ├── fluid/
 │   ├── contracts/          # Standard Fluid contracts (QSC20, QSC721, etc.)
 │   └── specification/      # Deep language grammar & execution specs
