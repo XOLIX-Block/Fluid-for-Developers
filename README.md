@@ -172,6 +172,10 @@ Fluid-for-Developers/
 │   ├── infrastructure/     # Validator node setup, AegisMesh P2P, RPC nodes
 │   ├── tools/              # Hardhat, Foundry, Remix, local Docker node, testing
 │   └── guides/             # Verification, oracles, logs, XCAP, token launch, DAO
+├── sdk/                    # Official @xolix/sdk Source Code (TypeScript)
+│   ├── src/                # Provider, Wallet, Contract, Token, Utils, Preflight
+│   ├── package.json        # NPM package manifest
+│   └── tsconfig.json       # TypeScript build configuration
 ├── fluid/
 │   ├── contracts/          # Standard Fluid contracts (QSC20, QSC721, etc.)
 │   └── specification/      # Deep language grammar & execution specs

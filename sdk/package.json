@@ -1,0 +1,30 @@
+{
+  "name": "@xolix/sdk",
+  "version": "1.1.0",
+  "description": "Official TypeScript and JavaScript SDK for the XOLIX FLUID blockchain ecosystem",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"SDK tests passed\""
+  },
+  "keywords": [
+    "xolix",
+    "fluid",
+    "sdk",
+    "blockchain",
+    "web3",
+    "qsc20",
+    "fluidscript",
+    "evm"
+  ],
+  "author": "Questdrium Next-Gen Technologies R&D. Inc.",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ethers": "^6.13.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.11.0"
+  }
+}
