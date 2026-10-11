@@ -1,0 +1,23 @@
+{
+  "name": "@xolix/fluid-for-developers",
+  "version": "1.0.0",
+  "description": "Comprehensive developer documentation, tutorials, standards, and SDK integration guides for the XOLIX FLUID blockchain ecosystem.",
+  "license": "Apache-2.0",
+  "author": "Questdrium Next-Gen Technologies R&D. Inc.",
+  "homepage": "https://scan.xolix.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emryvalyn/Fluid-for-Developers.git"
+  },
+  "keywords": [
+    "xolix",
+    "fluid",
+    "fluidscript",
+    "blockchain",
+    "evm",
+    "smart-contracts",
+    "sdk",
+    "qsc20",
+    "web3"
+  ]
+}
