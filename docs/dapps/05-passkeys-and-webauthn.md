@@ -1,5 +1,8 @@
 # Passkeys & WebAuthn Integration Guide (QSC-4900)
 
+> [!WARNING]
+> **Status note**: The WebAuthn browser calls are standard. The /api/smart-account/register and /api/sponsorTx endpoints shown are a reference design, not confirmed public endpoints.
+
 Traditional seed phrases (12/24 words) create friction and user drop-off. On **XOLIX FLUID**, developers can onboard users with zero seed phrases using **WebAuthn Biometric Passkeys (FaceID, TouchID, Windows Hello, and YubiKeys)** coupled with the **QSC-4900 Smart Passkey Account Standard**.
 
 ---

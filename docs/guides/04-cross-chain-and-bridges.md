@@ -1,5 +1,8 @@
 # Cross-Chain Interoperability & XCAP Protocol
 
+> [!WARNING]
+> **Status note**: No live cross-chain bridge or relayer network exists today. See the roadmap notice below.
+
 This guide describes how cross-chain asset transfers and arbitrary message passing work on **XOLIX FLUID** using the **XCAP (Cross-Chain Asset Protocol)** and the **Questdrium Light-Client Verifier (QLCV)**.
 
 > [!IMPORTANT]

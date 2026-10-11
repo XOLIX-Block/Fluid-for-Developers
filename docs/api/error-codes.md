@@ -1,5 +1,8 @@
 # RPC & VM Error Codes Reference
 
+> [!WARNING]
+> **Status note**: Section 1 and 2 (JSON-RPC 2.0 and EIP-1193 codes) are standard. The XHREC names and hex selectors in section 3 are illustrative of the planned human-readable error layer and are not confirmed against the node's emitted revert data. Always decode real revert data from the transaction receipt.
+
 This reference catalogs all standard JSON-RPC error codes, EVM runtime revert codes, and native **XHREC (Human-Readable Error Compiler)** error codes returned by the **XOLIX FLUID** nodes.
 
 ---

@@ -1,81 +1,60 @@
-# DAO Governance & Proposal Workflow
+# DAO Governance: Proposals & Voting
 
-This guide explains how decentralized governance, voting proposals, and timelocked treasury disbursements operate on **XOLIX FLUID**.
+This guide documents the **deployed** `XolixGovernance` contract exactly as it exists in the XolixScan contract sources (`src/contracts/XolixGovernance.sol`). It does not describe features the contract does not have.
 
 ---
 
-## 1. Governance Architecture
+## 1. Deployed Addresses (Mainnet, Chain ID 44990)
 
-The governance layer is powered by **GovernanceXolix** (`GXO` token standard) and the **DAO Treasury**:
+| Contract | Address |
+| :--- | :--- |
+| Governance token (`GXO`, `GovernanceXolix`) | `0x67f629477Ec16FafcE766169052601CC551bb9f9` |
+| DAO Treasury (`DaoTreasury`) | `0x99ACA09Fa6bc30b360A018e5d33c7e0768d0E7b1` |
 
+> [!NOTE]
+> The `XolixGovernance` proposal contract is constructed with the governance token address. Confirm its deployed address on [XolixScan](https://scan.xolix.io) before sending transactions.
+
+---
+
+## 2. What the Contract Does Today
+
+```solidity
+function createProposal(string title, string description) public;   // caller must hold > 0 governance tokens
+function vote(uint proposalId, bool inFavor) public;                // one vote per address, weight = current token balance
+function getProposals() public view returns (ProposalView[] memory);
+event ProposalCreated(uint id, address indexed proposer, string title);
+event Voted(uint indexed proposalId, address indexed voter, bool inFavor, uint weight);
 ```
-[Community Member / Proposer]
-            │ (Submits Proposal with >= 100,000 GXO)
-            ▼
-[GovernanceXolix Contract]
-            │ (Voting Period: 7 Days)
-            ├─► GXO Holders Cast Signed Votes (For / Against / Abstain)
-            │
-            ▼ (Quorum Reached: >= 4% of Total Supply)
-[Timelock Queue (48 Hours)]
-            │ (Grace Period for Auditing)
-            ▼
-[DAO Treasury Execution]
-            │ (Transfers Grants / Updates Protocol Parameters)
-            ▼
-[Target Smart Contract / Recipient]
-```
+
+Proposal status values: `Pending, Active, Passed, Failed, Executed`.
+
+### Current limitations (important for integrators)
+
+- **No on-chain execution**: proposals are signalling records. There is no calldata/target execution in this contract.
+- **No end-of-voting, quorum, or timelock logic** is implemented yet (the source notes these as future functions). Do not assume a voting period, quorum, or timelock.
+- **Vote weight uses the live `balanceOf`** at vote time (not a historical snapshot). Tokens can be moved between addresses and re-used, so treat results as non-binding signals until snapshotting is added.
+- Protocol-level governance parameters in the node (`governanceQuorumPercent = 67`, `governanceTimelockBlocks = 259200`, `emergencyTimelockBlocks = 21600`) live in `protocol/chainParameters.ts` and are not enforced by this Solidity contract.
 
 ---
 
-## 2. Proposal Lifecycle
-
-1. **Proposal Creation**:
-   * Minimum proposal threshold: **100,000 GXO** tokens held or delegated.
-   * Proposer provides target execution contract, value, and encoded calldata.
-2. **Voting Delay**:
-   * 1 day voting delay after proposal submission before voting begins (snapshot block is recorded).
-3. **Voting Period**:
-   * Lasts 7 days (~302,400 blocks).
-   * Voting power is determined by historical checkpointed balances (`getPastVotes(account, snapshotBlock)`), preventing flash-loan voting manipulation.
-4. **Quorum & Succeeded State**:
-   * Quorum requires $\ge 4\%$ of the circulating GXO supply to participate.
-   * If `For > Against` and quorum is met, the proposal status transitions to `Succeeded`.
-5. **Timelock Queue & Execution**:
-   * Successful proposals enter a mandatory **48-hour timelock delay**.
-   * Anyone can execute the proposal once the timelock expires.
-
----
-
-## 3. Submitting a Proposal via TypeScript SDK
+## 3. Example: Create a Proposal and Vote (ethers v6)
 
 ```typescript
-import { XolixProvider, XolixWallet, Contract, ethers } from '@xolix/sdk';
+import { ethers } from "ethers";
 
-const GOVERNANCE_ABI = [
-  "function propose(address[] targets, uint256[] values, bytes[] calldatas, string description) external returns (uint256)"
+const GOV_ABI = [
+  "function createProposal(string title, string description)",
+  "function vote(uint256 proposalId, bool inFavor)",
+  "function getProposals() view returns (tuple(uint256 id, address proposer, string title, string description, uint256 votesFor, uint256 votesAgainst, uint8 status)[])",
 ];
 
-async function submitProposal() {
-  const provider = new XolixProvider('https://rpc.xolix.io');
-  const wallet = new XolixWallet(process.env.PROPOSER_PRIVATE_KEY!, provider);
-  const gov = new Contract('0x0000000000000000000000000000000000001002', GOVERNANCE_ABI, wallet);
+const provider = new ethers.JsonRpcProvider("https://rpc.xolix.io", 44990);
+const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
+const gov = new ethers.Contract(process.env.GOVERNANCE_ADDRESS!, GOV_ABI, signer);
 
-  // Example: DAO Grant Proposal to fund developer tooling
-  const targetRecipient = "0x71C2a8751523B2dD6Fa259eE46b7F57e7939349A";
-  const grantAmount = ethers.parseEther("50000"); // 50,000 FLUID
-
-  const tx = await gov.propose(
-    [targetRecipient],
-    [grantAmount],
-    ["0x"], // Empty calldata for raw native transfer
-    "XIP-12: Grant funding for FluidScript Visual Studio Code LSP Extension"
-  );
-
-  console.log(`Proposal submitted! Tx: ${tx.hash}`);
-  const receipt = await tx.wait();
-  console.log('Proposal created successfully on-chain.');
-}
+await (await gov.createProposal("XIP-1: Example", "Description of the proposal")).wait();
+await (await gov.vote(0, true)).wait();
+console.log(await gov.getProposals());
 ```
 
 ---

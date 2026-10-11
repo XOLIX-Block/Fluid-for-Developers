@@ -23,7 +23,7 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 | **Public HTTPS RPC** | `https://rpc.xolix.io` | `https://testnet-rpc.xolix.io` |
 | **Public WebSocket** | `wss://ws.xolix.io` | `wss://ws-testnet.xolix.io` |
 | **Block Explorer** | [scan.xolix.io](https://scan.xolix.io) | [scan.xolix.io/testnet](https://scan.xolix.io/testnet) |
-| **Target Block Time** | 2.0 seconds | 2.0 seconds |
+| **Target Block Time** | 1.0 second (`blockTimeSeconds` in protocol parameters) | 1.0 second |
 | **Address Formats** | `xol1...` (User), `xolc1...` (Contract), `0x...` (EVM) | `xol1...` (User), `xolc1...` (Contract), `0x...` (EVM) |
 
 ---
@@ -46,6 +46,7 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - ⛽ [Gas & XCU Optimization](./docs/fluidscript/07-gas-and-xcu-optimization.md) — Multidimensional XCU gas calculations and savings.
 
 ### 3. Official TypeScript SDK (`@xolix/sdk`)
+> The [`sdk/`](./sdk) folder is an ethers-v6-based reference implementation (EVM JSON-RPC, `xol1…` address helpers, token and contract wrappers). The protocol repository also ships an SDK that talks to the native `xolix_*` RPC lane; check each method against the node you target.
 - 💻 [SDK Architecture & Overview](./docs/sdk/overview.md) — Modules, interfaces, and quick-start patterns.
 - 📦 [Installation & Setup](./docs/sdk/01-installation-and-setup.md) — Node.js, TypeScript, Next.js, and Vite configuration.
 - 🌐 [Providers & Real-Time WebSockets](./docs/sdk/02-providers-and-rpc.md) — `JsonRpcProvider`, `WebSocketProvider`, and event hooks.
@@ -157,7 +158,7 @@ contract SimpleCoin {
 ```text
 Fluid-for-Developers/
 ├── README.md               # Master Developer Hub (You are here)
-├── LICENSE                 # Public Apache-2.0 / MIT License
+├── LICENSE                 # Apache License 2.0
 ├── glossary.md             # Developer Glossary of Terms
 ├── roadmap.md              # Public Ecosystem Roadmap
 ├── docs/                   # Full Documentation Modules

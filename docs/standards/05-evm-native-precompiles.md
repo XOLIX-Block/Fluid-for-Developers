@@ -1,5 +1,8 @@
 # EVM Native Precompiles Reference Guide
 
+> [!WARNING]
+> **Status note**: Addresses 0x01-0x0a and their names match evm/precompiles.ts. The XCU gas figures and the Solidity interface/ABI-encodings below are illustrative design targets and are not verified against the runtime. Do not rely on them in production without testing on testnet.
+
 Solidity smart contracts deployed on **XOLIX FLUID** can interact with native blockchain consensus, zero-knowledge verification, and cross-standard token bridges through **10 protocol precompiled contracts** mapped to addresses `0x0000000000000000000000000000000000000001` through `0x000000000000000000000000000000000000000a`.
 
 ---

@@ -1,5 +1,8 @@
 # Production Token Launch & Liquidity Checklist
 
+> [!WARNING]
+> **Status note**: The checklist is general best practice. Contract names such as dex-amm-pool.fls and liquidity-locker.fls are the example contracts in this repository, not audited production deployments.
+
 This end-to-end checklist prepares founders, projects, and token creators to launch a token safely on **XOLIX FLUID**.
 
 ---

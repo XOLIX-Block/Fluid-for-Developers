@@ -1,5 +1,9 @@
 # P2P Mesh Networking & Peer Validation Architecture
 
+> [!WARNING]
+> **Status note**: This page describes the intended AegisMesh design. The P2P engine in the protocol repo (
+ode/p2p/index.ts) implements handshakes, peers and scoring, but specific numeric values here (score deltas, ban durations, 3,600-block epochs, VRF shuffling) are illustrative and have not been verified against the code. Stake-based validator admission is not yet enforced by the node (see the Validator guide).
+
 This document explains how the **XOLIX FLUID** peer-to-peer (P2P) networking layer (`AegisMesh v1.1.0`) connects nodes, validates peer authenticity, distinguishes real nodes from fake/sybil nodes, and guarantees Byzantine fault tolerance.
 
 ---
