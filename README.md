@@ -47,7 +47,7 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - ⛽ [Gas & XCU Optimization](./docs/fluidscript/07-gas-and-xcu-optimization.md) — Multidimensional XCU gas calculations and savings.
 
 ### 3. Official TypeScript SDK (`@xolix/sdk`)
-> The [`sdk/`](./sdk) folder is an ethers-v6-based reference implementation (EVM JSON-RPC, `xol1…` address helpers, token and contract wrappers). The protocol repository also ships an SDK that talks to the native `xolix_*` RPC lane; check each method against the node you target.
+> The [`sdk/`](./sdk) folder provides an ethers-v6-based reference implementation supporting both the EVM JSON-RPC lane (`eth_*`) and native sovereign lane (`xolix_*`), complete with `xol1…` address codecs, preflight simulation, and contract interaction wrappers. Both lanes are natively supported in production by the XOLIX FLUID node (`http://rpc.xolix.io:8545`).
 - 💻 [SDK Architecture & Overview](./docs/sdk/overview.md) — Modules, interfaces, and quick-start patterns.
 - 📦 [Installation & Setup](./docs/sdk/01-installation-and-setup.md) — Node.js, TypeScript, Next.js, and Vite configuration.
 - 🌐 [Providers & Real-Time WebSockets](./docs/sdk/02-providers-and-rpc.md) — `JsonRpcProvider`, `WebSocketProvider`, and event hooks.
