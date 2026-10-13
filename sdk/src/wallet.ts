@@ -5,12 +5,12 @@ import { XolixProvider } from './provider.js';
 import { XolixUtils, encodeBech32m } from './utils.js';
 
 export class XolixWallet {
-  private internalWallet: ethers.Wallet;
+  private internalWallet: ethers.BaseWallet;
   public provider?: XolixProvider;
   public readonly address: string; // 0x...
   public readonly nativeAddress: string; // xol1...
 
-  constructor(privateKeyOrWallet: string | ethers.Wallet, provider?: XolixProvider) {
+  constructor(privateKeyOrWallet: string | ethers.BaseWallet, provider?: XolixProvider) {
     if (typeof privateKeyOrWallet === 'string') {
       const cleanKey = privateKeyOrWallet.startsWith('0x') ? privateKeyOrWallet : '0x' + privateKeyOrWallet;
       this.internalWallet = new ethers.Wallet(cleanKey);
@@ -42,7 +42,7 @@ export class XolixWallet {
   }
 
   getMnemonic(): string | undefined {
-    return this.internalWallet.mnemonic?.phrase;
+    return (this.internalWallet as ethers.HDNodeWallet).mnemonic?.phrase;
   }
 
   getStealthAddress(): string {

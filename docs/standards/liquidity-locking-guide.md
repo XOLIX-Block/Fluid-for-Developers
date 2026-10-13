@@ -48,7 +48,7 @@ For projects that never intend to withdraw the initial liquidity:
 
 When developers or users deploy tokens through:
 - `scan.xolix.io/master/deploy` (Ecosystem Core Contracts)
-- `scan.xolix.io/xolixscan/developers/deploy` (Custom User & Developer Tokens)
+- `scan.xolix.io/developers/deploy` (Custom User & Developer Tokens)
 
 **Every single deployment is a real, live on-chain transaction**:
 - The contract bytecode and ABI parameters are submitted via the connected Web3 wallet (`eth_sendTransaction`).

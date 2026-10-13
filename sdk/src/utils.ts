@@ -1,6 +1,12 @@
-// Copyright (c) 2026 Questdrium Next-Gen Technologies R&D. Inc., All rights reserved.
-
 import { ethers } from 'ethers';
+
+export const XOLIX_MAINNET_CHAIN_ID = 44990;
+export const XOLIX_TESTNET_CHAIN_ID = 44991;
+export const XOLIX_MAINNET_RPC_URL = 'http://rpc.xolix.io:8545';
+export const XOLIX_MAINNET_HTTPS_GATEWAY_URL = 'https://xolix.web.app/api/xolix/rpc';
+export const XOLIX_TESTNET_RPC_URL = 'http://testnet-rpc.xolix.io:8545';
+export const XOLIX_MAINNET_WS_URL = 'ws://ws.xolix.io:8546';
+export const XOLIX_EXPLORER_URL = 'https://scan.xolix.io';
 
 const BECH32M_ALPHABET = 'qpzry9x8gf2tvdw0s3jn54khce6mua7l';
 
@@ -102,9 +108,11 @@ export class XolixUtils {
   /**
    * Validates if string is a valid EVM or Bech32m address
    */
-  static isValidAddress(address: string): boolean {
+  static isValidAddress(address: unknown): boolean {
+    if (typeof address !== 'string') return false;
     if (ethers.isAddress(address)) return true;
-    if (address.startsWith('xol1') && address.length >= 38) return true;
+    const str = String(address);
+    if (str.startsWith('xol1') && str.length >= 38) return true;
     return false;
   }
 }

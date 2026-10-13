@@ -5,8 +5,15 @@ The XOLIX JSON-RPC interface supports both standard Ethereum JSON-RPC methods an
 ---
 
 ## 1. Supported Endpoints
-- **Mainnet**: `https://rpc.xolix.io` (Chain ID: `44990`)
-- **Testnet**: `https://testnet-rpc.xolix.io` (Chain ID: `44991`)
+
+### Direct Node RPC (Recommended for CLI, SDK, Hardhat, Foundry, Backend)
+- **Mainnet Direct Node**: `http://rpc.xolix.io:8545` (Chain ID: `44990`, `0xafbe`)
+- **Mainnet WebSocket**: `ws://ws.xolix.io:8546`
+- **Testnet Direct Node**: `http://testnet-rpc.xolix.io:8545` (Chain ID: `44991`, `0xafbf`)
+
+### HTTPS RPC Gateway (Browser dApps / Web3 Frontends)
+- **Mainnet HTTPS Gateway**: `https://xolix.web.app/api/xolix/rpc` / `https://scan.xolix.io/api/rpc`
+- **Testnet HTTPS Gateway**: `https://scan.xolix.io/api/rpc`
 
 ---
 
@@ -41,7 +48,18 @@ All standard EVM methods work out of the box:
 ## 4. Example cURL Request
 
 ```bash
-curl -X POST "https://rpc.xolix.io" \
+# Query Direct Node RPC (Chain ID 44990)
+curl -X POST "http://rpc.xolix.io:8545" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc": "2.0",
+    "method": "eth_blockNumber",
+    "params": [],
+    "id": 1
+  }'
+
+# Or Query via HTTPS Gateway
+curl -X POST "https://xolix.web.app/api/xolix/rpc" \
   -H "Content-Type: application/json" \
   -d '{
     "jsonrpc": "2.0",

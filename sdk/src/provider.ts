@@ -22,12 +22,12 @@ export class XolixProvider {
   private chainId: number;
   private internalProvider: ethers.JsonRpcProvider;
 
-  constructor(urlOrConfig: string | ProviderConfig = 'https://rpc.xolix.io') {
+  constructor(urlOrConfig: string | ProviderConfig = 'http://rpc.xolix.io:8545') {
     if (typeof urlOrConfig === 'string') {
       this.url = urlOrConfig;
       this.chainId = urlOrConfig.includes('testnet') ? 44991 : 44990;
     } else {
-      this.url = urlOrConfig.url || 'https://rpc.xolix.io';
+      this.url = urlOrConfig.url || 'http://rpc.xolix.io:8545';
       this.chainId = urlOrConfig.chainId || (this.url.includes('testnet') ? 44991 : 44990);
     }
     this.internalProvider = new ethers.JsonRpcProvider(this.url, this.chainId, { staticNetwork: true });

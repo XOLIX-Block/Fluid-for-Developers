@@ -13,13 +13,14 @@ This document provides the complete, authoritative network configuration and pub
 | **Chain ID (Hex)** | `0xAFBE` | `0xAFBF` |
 | **Native Currency** | `XOLT` / `XOL` | `tXOL` |
 | **Currency Decimals** | 18 | 18 |
-| **Public HTTPS RPC** | `https://rpc.xolix.io` | `https://testnet-rpc.xolix.io` |
-| **Public WebSocket** | `wss://ws.xolix.io` | `wss://ws-testnet.xolix.io` |
+| **Direct Node JSON-RPC** | `http://rpc.xolix.io:8545` | `http://testnet-rpc.xolix.io:8545` |
+| **HTTPS RPC Gateway (DApps)** | `https://xolix.web.app/api/xolix/rpc` / `https://scan.xolix.io/api/rpc` | `https://scan.xolix.io/api/rpc` |
+| **Public WebSocket** | `ws://ws.xolix.io:8546` | `ws://ws-testnet.xolix.io:8546` |
 | **Block Explorer** | `https://scan.xolix.io` | `https://scan.xolix.io/testnet` |
 | **Explorer API** | `https://scan.xolix.io/api` | `https://scan.xolix.io/api` |
 | **Prometheus Metrics**| `http://rpc.xolix.io:9090/metrics` | `http://testnet-rpc.xolix.io:9090/metrics` |
 | **Consensus Protocol**| AegisMesh BFT (Proof of Stake) | AegisMesh BFT (Testnet Validators) |
-| **Target Block Time** | 2.0 seconds | 2.0 seconds |
+| **Target Block Time** | 1.0 second | 1.0 second |
 
 ---
 
@@ -44,16 +45,17 @@ XOLIX utilizes type-aware Bech32m address encoding to prevent cross-network mist
 Add this template to your dApp or backend `.env` file:
 
 ```bash
-# Mainnet Configuration
-NEXT_PUBLIC_MAINNET_RPC_URL="https://rpc.xolix.io"
-NEXT_PUBLIC_MAINNET_WS_URL="wss://ws.xolix.io"
+# Mainnet Direct Node & Gateway Configuration
+NEXT_PUBLIC_MAINNET_RPC_URL="http://rpc.xolix.io:8545"
+NEXT_PUBLIC_MAINNET_GATEWAY_URL="https://xolix.web.app/api/xolix/rpc"
+NEXT_PUBLIC_MAINNET_WS_URL="ws://ws.xolix.io:8546"
 NEXT_PUBLIC_MAINNET_CHAIN_ID=44990
 NEXT_PUBLIC_MAINNET_CHAIN_HEX="0xafbe"
 NEXT_PUBLIC_MAINNET_EXPLORER="https://scan.xolix.io"
 
 # Testnet Configuration
-NEXT_PUBLIC_TESTNET_RPC_URL="https://testnet-rpc.xolix.io"
-NEXT_PUBLIC_TESTNET_WS_URL="wss://ws-testnet.xolix.io"
+NEXT_PUBLIC_TESTNET_RPC_URL="http://testnet-rpc.xolix.io:8545"
+NEXT_PUBLIC_TESTNET_WS_URL="ws://ws-testnet.xolix.io:8546"
 NEXT_PUBLIC_TESTNET_CHAIN_ID=44991
 NEXT_PUBLIC_TESTNET_CHAIN_HEX="0xafbf"
 NEXT_PUBLIC_TESTNET_EXPLORER="https://scan.xolix.io/testnet"
@@ -74,7 +76,7 @@ To add XOLIX to MetaMask or any EIP-3085 compatible wallet:
     "symbol": "XOLT",
     "decimals": 18
   },
-  "rpcUrls": ["https://rpc.xolix.io"],
+  "rpcUrls": ["http://rpc.xolix.io:8545", "https://xolix.web.app/api/xolix/rpc"],
   "blockExplorerUrls": ["https://scan.xolix.io"]
 }
 ```

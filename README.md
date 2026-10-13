@@ -20,8 +20,9 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 | **Network Name** | `XOLIXBlock Mainnet` / `XOLIX FLUID` | `XOLIXBlock Testnet Sandbox` |
 | **Chain ID** | **`44990`** (`0xAFBE`) | **`44991`** (`0xAFBF`) |
 | **Native Currency** | `XOLT` / `XOL` (18 decimals) | `tXOL` (18 decimals) |
-| **Public HTTPS RPC** | `https://rpc.xolix.io` | `https://testnet-rpc.xolix.io` |
-| **Public WebSocket** | `wss://ws.xolix.io` | `wss://ws-testnet.xolix.io` |
+| **Direct Node JSON-RPC** | `http://rpc.xolix.io:8545` | `http://testnet-rpc.xolix.io:8545` |
+| **HTTPS RPC Gateway (dApps)** | `https://xolix.web.app/api/xolix/rpc` / `https://scan.xolix.io/api/rpc` | `https://scan.xolix.io/api/rpc` |
+| **Public WebSocket** | `ws://ws.xolix.io:8546` | `ws://ws-testnet.xolix.io:8546` |
 | **Block Explorer** | [scan.xolix.io](https://scan.xolix.io) | [scan.xolix.io/testnet](https://scan.xolix.io/testnet) |
 | **Target Block Time** | 1.0 second (`blockTimeSeconds` in protocol parameters) | 1.0 second |
 | **Address Formats** | `xol1...` (User), `xolc1...` (Contract), `0x...` (EVM) | `xol1...` (User), `xolc1...` (Contract), `0x...` (EVM) |
