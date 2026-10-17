@@ -1,6 +1,6 @@
 # Running a Local Development Node (Docker & CLI)
 
-While developers can build against the public **XOLIX Testnet** (`https://testnet-rpc.xolix.io`), running a sovereign local sandbox node (`http://127.0.0.1:8545`) provides **instant block mining**, zero latency, and infinite free test balances.
+While developers can build against the public **XOLIX Testnet** (`https://testnet-rpc.xolix.io`), running a native local sandbox node (`http://127.0.0.1:8545`) provides **instant block mining**, zero latency, and infinite free test balances.
 
 ---
 

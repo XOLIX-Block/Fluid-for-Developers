@@ -1,9 +1,9 @@
-# Custom Sovereign Wallet Engineering Guide
+# Custom Native Wallet Engineering Guide
 
 > [!WARNING]
 > **Status note**: For broadcasting, use the standard eth_sendRawTransaction method on https://rpc.xolix.io. The xol_broadcastRawTransaction call and the native-path derivation shown are illustrative; the shipped wallet derives EVM keys on the standard EVM path.
 
-This manual guides wallet vendors, dApp engineers, and hardware wallet developers on building a sovereign non-custodial wallet for **XOLIX FLUID** from scratch in JavaScript / TypeScript.
+This manual guides wallet vendors, dApp engineers, and hardware wallet developers on building a native non-custodial wallet for **XOLIX FLUID** from scratch in JavaScript / TypeScript.
 
 ---
 

@@ -20,7 +20,7 @@ Solidity smart contracts deployed on **XOLIX FLUID** can interact with native bl
 | `0x0000000000000000000000000000000000000007` | `CapabilityValidation` | 6,000 | Queries contract capability constraints and upgrade safety policies. |
 | `0x0000000000000000000000000000000000000008` | `StateProof` | 18,000 | Verifies cross-contract Merkle state proofs trustlessly. |
 | `0x0000000000000000000000000000000000000009` | `GovernanceVoting` | 10,000 | Dispatches on-chain governance votes directly to active XIP proposals. |
-| `0x000000000000000000000000000000000000000a` | `NativeAssetBridge` | 7,000 | Bridges EVM assets directly to sovereign FluidScript runtime standards. |
+| `0x000000000000000000000000000000000000000a` | `NativeAssetBridge` | 7,000 | Bridges EVM assets directly to native FluidScript runtime standards. |
 
 ---
 

@@ -30,7 +30,7 @@ XOLIX utilizes type-aware Bech32m address encoding to prevent cross-network mist
 
 | Prefix | Type | Example Format | Purpose |
 | :--- | :--- | :--- | :--- |
-| **`xol1...`** | User Account | `xol1q7k50a2g...` | Native sovereign user wallet address |
+| **`xol1...`** | User Account | `xol1q7k50a2g...` | Native native user wallet address |
 | **`xolc1...`**| Smart Contract | `xolc1q9m4e7...` | Deployed native Fluid contract |
 | **`xolv1...`**| Validator Node | `xolv1qp0d2...` | Validator consensus and staking node |
 | **`xolg1...`**| Governance / DAO | `xolg1q5l2a...` | Protocol governance timelock & treasury |

@@ -25,7 +25,7 @@ The **XOLIX TypeScript SDK** (`@xolix/sdk` / `xolix-fluid`) is a browser-isomorp
 ### Module Responsibilities
 
 1. **`JsonRpcProvider`**: Connects via HTTPS to Mainnet (`rpc.xolix.io`) or Testnet (`testnet-rpc.xolix.io`). Handles transaction broadcasting, receipt polling, and block events.
-2. **`XolixWallet`**: Sovereign key management. Manages 24-word BIP-39 mnemonics, private keys, native Bech32m addresses (`xol1...`), stealth addresses (`xol1s...`), and cryptographic signing.
+2. **`XolixWallet`**: Native key management. Manages 24-word BIP-39 mnemonics, private keys, native Bech32m addresses (`xol1...`), stealth addresses (`xol1s...`), and cryptographic signing.
 3. **`XolixContract`**: Object-oriented interface for calling deployed Fluid (`xolc1...`) or EVM (`0x...`) smart contracts. Handles ABI encoding, zero-gas view reads, and state writes.
 4. **`ContractFactory`**: Programmatic deployment of compiled `.xls` bytecode or Solidity bytecode.
 5. **`FluidContractManager`**: In-memory compilation of `.fls` source code, upgrade simulations, and schema audits.

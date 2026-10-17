@@ -1,6 +1,6 @@
 # Wallets, Key Derivation & Address Standards
 
-`XolixWallet` is the sovereign signing abstraction for XOLIX. It implements strict cryptographic standards:
+`XolixWallet` is the native signing abstraction for XOLIX. It implements strict cryptographic standards:
 - **BIP-39**: 24-word mnemonic seed generation.
 - **BIP-44**: Hierarchical deterministic derivation path (`m/44'/60'/0'/0/i`).
 - **BIP-350**: Bech32m checksummed address encoding.
@@ -10,7 +10,7 @@
 
 ## 1. Creating and Restoring Wallets
 
-### A. Generate a New Sovereign Wallet
+### A. Generate a New Native Wallet
 ```typescript
 import { XolixWallet, JsonRpcProvider } from '@xolix/sdk';
 

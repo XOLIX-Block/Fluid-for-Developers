@@ -1,6 +1,6 @@
 /**
  * 02-wallet-management.ts
- * Demonstrates creating sovereign Xolix wallets, restoring from BIP-39 mnemonics,
+ * Demonstrates creating native Xolix wallets, restoring from BIP-39 mnemonics,
  * deriving Bech32m addresses (xol1...), stealth addresses (xol1s...), and signing transactions.
  */
 import { JsonRpcProvider, XolixWallet, XolixUtils } from '@xolix/sdk';
@@ -12,7 +12,7 @@ async function main() {
 
   // 1. Generate a brand new cryptographically secure 24-word wallet
   const newWallet = XolixWallet.createRandom(provider);
-  console.log('--- Newly Generated Sovereign Wallet ---');
+  console.log('--- Newly Generated Native Wallet ---');
   console.log('Mnemonic Phrase (24 words):', newWallet.mnemonic?.phrase);
   console.log('Private Key:              ', newWallet.privateKey);
   console.log('Native Bech32m Address:   ', newWallet.getNativeAddress()); // e.g. xol1...

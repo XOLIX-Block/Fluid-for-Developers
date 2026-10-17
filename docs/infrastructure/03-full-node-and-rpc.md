@@ -1,6 +1,6 @@
 # Running a Full RPC Node
 
-This guide explains how developers, exchanges, indexers, and dApps can run their own sovereign **Full RPC Node** on XOLIX FLUID to query state, listen to events, and submit transactions without rate limits.
+This guide explains how developers, exchanges, indexers, and dApps can run their own native **Full RPC Node** on XOLIX FLUID to query state, listen to events, and submit transactions without rate limits.
 
 ---
 
@@ -119,7 +119,7 @@ curl -X POST http://127.0.0.1:8545 \
 
 ## 5. Connecting dApps & SDK
 
-To connect your dApp or script to your own sovereign RPC:
+To connect your dApp or script to your own native RPC:
 
 ```typescript
 import { XolixProvider } from '@xolix/sdk';

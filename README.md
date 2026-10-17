@@ -1,7 +1,7 @@
 <!-- Copyright (c) 2026 Questdrium Next-Gen Technologies R&D. Inc., All rights reserved. -->
 # Fluid for Developers: The Complete XOLIX FLUID Developer Hub
 
-Welcome to **Fluid for Developers** — the official documentation, tutorial suite, and architectural reference for building decentralized applications, sovereign wallets, and smart contracts on the **XOLIX FLUID** blockchain.
+Welcome to **Fluid for Developers** — the official documentation, tutorial suite, and architectural reference for building decentralized applications, native wallets, and smart contracts on the **XOLIX FLUID** blockchain.
 
 ---
 
@@ -47,7 +47,7 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - ⛽ [Gas & XCU Optimization](./docs/fluidscript/07-gas-and-xcu-optimization.md) — Multidimensional XCU gas calculations and savings.
 
 ### 3. Official TypeScript SDK (`@xolix/sdk`)
-> The [`sdk/`](./sdk) folder provides an ethers-v6-based reference implementation supporting both the EVM JSON-RPC lane (`eth_*`) and native sovereign lane (`xolix_*`), complete with `xol1…` address codecs, preflight simulation, and contract interaction wrappers. Both lanes are natively supported in production by the XOLIX FLUID node (`https://rpc.xolix.io`).
+> The [`sdk/`](./sdk) folder provides an ethers-v6-based reference implementation supporting both the EVM JSON-RPC lane (`eth_*`) and native native lane (`xolix_*`), complete with `xol1…` address codecs, preflight simulation, and contract interaction wrappers. Both lanes are natively supported in production by the XOLIX FLUID node (`https://rpc.xolix.io`).
 - 💻 [SDK Architecture & Overview](./docs/sdk/overview.md) — Modules, interfaces, and quick-start patterns.
 - 📦 [Installation & Setup](./docs/sdk/01-installation-and-setup.md) — Node.js, TypeScript, Next.js, and Vite configuration.
 - 🌐 [Providers & Real-Time WebSockets](./docs/sdk/02-providers-and-rpc.md) — `JsonRpcProvider`, `WebSocketProvider`, and event hooks.
@@ -63,7 +63,7 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - 🛠️ [Ethers.js (v5/v6) & Web3.js](./docs/dapps/03-ethers-and-web3.md) — Node.js backends and legacy integration guides.
 - 📊 [Transaction Lifecycle & Receipts](./docs/dapps/04-transaction-lifecycle.md) — Mempool states, event subscriptions, and VM error codes.
 - 👆 [Biometric Passkeys & WebAuthn](./docs/dapps/05-passkeys-and-webauthn.md) — Seedless FaceID/TouchID onboarding and gas sponsorship via QSC-4900.
-- 💼 [Custom Sovereign Wallet Engineering](./docs/dapps/06-custom-wallet-engineering.md) — BIP-39 mnemonic derivation, dual Bech32m/EVM addressing, and XRAS transaction signing.
+- 💼 [Custom Native Wallet Engineering](./docs/dapps/06-custom-wallet-engineering.md) — BIP-39 mnemonic derivation, dual Bech32m/EVM addressing, and XRAS transaction signing.
 
 ### 5. Token & Contract Standards
 - 🪙 [QSC-20 Fungible Token Standard](./docs/standards/QSC20-fungible-tokens.md) — The standard currency token specification (`QSC20.fls`).
@@ -94,7 +94,7 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - 🛑 [RPC & VM Error Codes Reference](./docs/api/error-codes.md) — Standard JSON-RPC error codes, EVM execution reverts, and XHREC error translations.
 
 ### 9. Infrastructure & Node Operations
-- 🛡️ [Validator Node Setup & Staking Guide](./docs/infrastructure/01-validator-node-setup.md) — Hardware specs, sovereign key generation, on-chain stake registration, and protocol auto-activation.
+- 🛡️ [Validator Node Setup & Staking Guide](./docs/infrastructure/01-validator-node-setup.md) — Hardware specs, private key generation, on-chain stake registration, and protocol auto-activation.
 - 🕸️ [P2P Mesh & Consensus Architecture](./docs/infrastructure/02-p2p-mesh-and-consensus.md) — AegisMesh P2P gossip, handshake signatures, peer scoring, sybil defense, and fake node prevention.
 - ⚡ [Running a Full RPC Node](./docs/infrastructure/03-full-node-and-rpc.md) — Non-validating archival and JSON-RPC node setup with Nginx reverse proxy.
 
