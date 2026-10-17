@@ -30,8 +30,8 @@ optimizer_runs = 200
 evm_version = "cancun"
 
 [rpc_endpoints]
-xolix_mainnet = "http://rpc.xolix.io:8545"
-xolix_testnet = "http://testnet-rpc.xolix.io:8545"
+xolix_mainnet = "https://rpc.xolix.io"
+xolix_testnet = "https://testnet-rpc.xolix.io"
 xolix_local   = "http://127.0.0.1:8545"
 
 [etherscan]
@@ -46,20 +46,20 @@ xolix_testnet = { key = "${XOLIXSCAN_API_KEY}", url = "https://scan.xolix.io/api
 ### Check Network Chain ID
 ```bash
 # Query Mainnet (Should return 44990 / 0xafbe)
-cast chain-id --rpc-url http://rpc.xolix.io:8545
+cast chain-id --rpc-url https://rpc.xolix.io
 
 # Query Testnet (Should return 44991 / 0xafbf)
-cast chain-id --rpc-url http://testnet-rpc.xolix.io:8545
+cast chain-id --rpc-url https://testnet-rpc.xolix.io
 ```
 
 ### Check Account Balance
 ```bash
-cast balance 0x71C...49A --rpc-url http://testnet-rpc.xolix.io:8545
+cast balance 0x71C...49A --rpc-url https://testnet-rpc.xolix.io
 ```
 
 ### Query Latest Block
 ```bash
-cast block-number --rpc-url http://rpc.xolix.io:8545
+cast block-number --rpc-url https://rpc.xolix.io
 ```
 
 ---

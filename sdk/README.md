@@ -1,6 +1,6 @@
 # @xolix/sdk (reference implementation)
 
-TypeScript SDK built on [ethers v6](https://docs.ethers.org/v6/) for the XOLIX FLUID EVM JSON-RPC lane (`http://rpc.xolix.io:8545`, Chain ID 44990; testnet 44991).
+TypeScript SDK built on [ethers v6](https://docs.ethers.org/v6/) for the XOLIX FLUID EVM JSON-RPC lane (`https://rpc.xolix.io`, Chain ID 44990; testnet 44991).
 
 ## Install and build
 
@@ -16,7 +16,7 @@ npm run build    # emits ./dist (ESM & CommonJS type declarations)
 import { XolixProvider, XolixWallet } from '@xolix/sdk';
 
 // Connect to Direct Node RPC
-const provider = new XolixProvider('http://rpc.xolix.io:8545');
+const provider = new XolixProvider('https://rpc.xolix.io');
 
 // Or connect to HTTPS Gateway (for browser dApps)
 // const provider = new XolixProvider('https://xolix.web.app/api/xolix/rpc');

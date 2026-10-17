@@ -43,11 +43,11 @@ Generate or create your toolchain configuration:
   },
   "networks": {
     "mainnet": {
-      "rpcUrl": "http://rpc.xolix.io:8545",
+      "rpcUrl": "https://rpc.xolix.io",
       "chainId": 44990
     },
     "testnet": {
-      "rpcUrl": "http://testnet-rpc.xolix.io:8545",
+      "rpcUrl": "https://testnet-rpc.xolix.io",
       "chainId": 44991
     }
   },

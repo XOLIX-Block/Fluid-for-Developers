@@ -20,9 +20,9 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 | **Network Name** | `XOLIXBlock Mainnet` / `XOLIX FLUID` | `XOLIXBlock Testnet Sandbox` |
 | **Chain ID** | **`44990`** (`0xAFBE`) | **`44991`** (`0xAFBF`) |
 | **Native Currency** | `XOLT` / `XOL` (18 decimals) | `tXOL` (18 decimals) |
-| **Direct Node JSON-RPC** | `http://rpc.xolix.io:8545` | `http://testnet-rpc.xolix.io:8545` |
-| **HTTPS RPC Gateway (dApps)** | `https://xolix.web.app/api/xolix/rpc` / `https://scan.xolix.io/api/rpc` | `https://scan.xolix.io/api/rpc` |
-| **Public WebSocket** | `ws://ws.xolix.io:8546` | `ws://ws-testnet.xolix.io:8546` |
+| **Direct Node JSON-RPC** | `https://rpc.xolix.io` | `https://testnet-rpc.xolix.io` |
+| **HTTPS RPC Gateway (dApps)** | `https://rpc.xolix.io` / `https://scan.xolix.io/api/rpc` | `https://scan.xolix.io/api/rpc` |
+| **Public WebSocket** | `wss://rpc.xolix.io/ws` | `wss://testnet-rpc.xolix.io/ws` |
 | **Block Explorer** | [scan.xolix.io](https://scan.xolix.io) | [scan.xolix.io/testnet](https://scan.xolix.io/testnet) |
 | **Target Block Time** | 1.0 second (`blockTimeSeconds` in protocol parameters) | 1.0 second |
 | **Address Formats** | `xol1...` (User), `xolc1...` (Contract), `0x...` (EVM) | `xol1...` (User), `xolc1...` (Contract), `0x...` (EVM) |
@@ -47,7 +47,7 @@ Welcome to **Fluid for Developers** — the official documentation, tutorial sui
 - ⛽ [Gas & XCU Optimization](./docs/fluidscript/07-gas-and-xcu-optimization.md) — Multidimensional XCU gas calculations and savings.
 
 ### 3. Official TypeScript SDK (`@xolix/sdk`)
-> The [`sdk/`](./sdk) folder provides an ethers-v6-based reference implementation supporting both the EVM JSON-RPC lane (`eth_*`) and native sovereign lane (`xolix_*`), complete with `xol1…` address codecs, preflight simulation, and contract interaction wrappers. Both lanes are natively supported in production by the XOLIX FLUID node (`http://rpc.xolix.io:8545`).
+> The [`sdk/`](./sdk) folder provides an ethers-v6-based reference implementation supporting both the EVM JSON-RPC lane (`eth_*`) and native sovereign lane (`xolix_*`), complete with `xol1…` address codecs, preflight simulation, and contract interaction wrappers. Both lanes are natively supported in production by the XOLIX FLUID node (`https://rpc.xolix.io`).
 - 💻 [SDK Architecture & Overview](./docs/sdk/overview.md) — Modules, interfaces, and quick-start patterns.
 - 📦 [Installation & Setup](./docs/sdk/01-installation-and-setup.md) — Node.js, TypeScript, Next.js, and Vite configuration.
 - 🌐 [Providers & Real-Time WebSockets](./docs/sdk/02-providers-and-rpc.md) — `JsonRpcProvider`, `WebSocketProvider`, and event hooks.

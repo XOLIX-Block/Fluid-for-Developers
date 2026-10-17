@@ -49,14 +49,14 @@ const config: HardhatUserConfig = {
     },
     // XOLIX Testnet (Public Developer Sandbox)
     xolixTestnet: {
-      url: "http://testnet-rpc.xolix.io:8545",
+      url: "https://testnet-rpc.xolix.io",
       chainId: 44991,
       accounts: [DEPLOYER_PRIVATE_KEY],
       gasPrice: 1000000000, // 1 Gwei
     },
     // XOLIX Mainnet (Production Direct Node RPC)
     xolixMainnet: {
-      url: "http://rpc.xolix.io:8545",
+      url: "https://rpc.xolix.io",
       chainId: 44990,
       accounts: [DEPLOYER_PRIVATE_KEY],
       gasPrice: 2000000000, // 2 Gwei

@@ -2,10 +2,10 @@ import { ethers } from 'ethers';
 
 export const XOLIX_MAINNET_CHAIN_ID = 44990;
 export const XOLIX_TESTNET_CHAIN_ID = 44991;
-export const XOLIX_MAINNET_RPC_URL = 'http://rpc.xolix.io:8545';
-export const XOLIX_MAINNET_HTTPS_GATEWAY_URL = 'https://xolix.web.app/api/xolix/rpc';
-export const XOLIX_TESTNET_RPC_URL = 'http://testnet-rpc.xolix.io:8545';
-export const XOLIX_MAINNET_WS_URL = 'ws://ws.xolix.io:8546';
+export const XOLIX_MAINNET_RPC_URL = 'https://rpc.xolix.io';
+export const XOLIX_MAINNET_HTTPS_GATEWAY_URL = 'https://rpc.xolix.io';
+export const XOLIX_TESTNET_RPC_URL = 'https://testnet-rpc.xolix.io';
+export const XOLIX_MAINNET_WS_URL = 'wss://rpc.xolix.io/ws';
 export const XOLIX_EXPLORER_URL = 'https://scan.xolix.io';
 
 const BECH32M_ALPHABET = 'qpzry9x8gf2tvdw0s3jn54khce6mua7l';
